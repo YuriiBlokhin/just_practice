@@ -1,4 +1,3 @@
-import requests
 from rest_api.objects.create_object import CreateObject
 from rest_api.objects.get_object import GetObject
 from rest_api.objects.update_object import UpdateObject
