@@ -3,6 +3,8 @@ import json
 import os
 from dotenv import load_dotenv
 import requests
+from rest_api.objects.create_object import CreateObject
+from rest_api.objects.delete_object import DeleteObject
 
 load_dotenv()
 
@@ -17,9 +19,12 @@ def update_payload():
 
 @pytest.fixture()
 def obj_id(payload):
-    response = requests.post('https://api.restful-api.dev/objects', json=payload).json()
-    yield response['id']
-    requests.delete(f'https://api.restful-api.dev/objects/{response["id"]}')
+    test_object = CreateObject()
+    test_object.create_new_object(payload)
+    yield test_object.response_json['id']
+    delete_test_object = DeleteObject()
+    delete_test_object.delete_object_by_id(test_object.response_json['id'])
+
 
 # pet_store_fixtures
 @pytest.fixture()
