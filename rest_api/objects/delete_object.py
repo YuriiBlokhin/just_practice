@@ -1,5 +1,5 @@
 import requests
-from rest_api.objects.base_endpoint import BaseEndpoint
+from rest_api.objects.base_object import BaseEndpoint
 
 
 class DeleteObject(BaseEndpoint):

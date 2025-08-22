@@ -1,5 +1,5 @@
 import requests
-from pet_store.objects.pet_objects.base_endpoint import BaseEndpoint
+from pet_store.objects.pet_objects.base_pet import BaseEndpoint
 
 
 class GetPet(BaseEndpoint):
@@ -11,5 +11,5 @@ class GetPet(BaseEndpoint):
     def check_response_id(self, pet_id):
         assert self.response_json['id'] == pet_id
 
-    def check_response_404(self):
+    def check_response_404(self, pet_id):
         assert self.response.status_code == 404

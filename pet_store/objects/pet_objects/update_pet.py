@@ -1,5 +1,5 @@
 import requests
-from pet_store.objects.pet_objects.base_endpoint import BaseEndpoint
+from pet_store.objects.pet_objects.base_pet import BaseEndpoint
 
 
 class UpdatePet(BaseEndpoint):

@@ -25,13 +25,13 @@ def test_update_pet(pet_base_url, pet_id, pet_update_payload):
     update_pet_endpoint.check_response_name(pet_update_payload['name'])
 
 def test_delete_pet(pet_base_url, pet_id):
-    time.sleep(3) # for sure server have enough time to create an object
+    time.sleep(3)
     delete_pet_endpoint = DeletePet()
     delete_pet_endpoint.delete_pet_by_id(pet_base_url, pet_id)
     delete_pet_endpoint.check_response_200()
     get_deleted_pet_by_id = GetPet()
     get_deleted_pet_by_id.get_pet_by_id(pet_base_url, pet_id)
-    get_deleted_pet_by_id.check_response_404()
+    get_deleted_pet_by_id.check_response_404(pet_id)
 
 
 
