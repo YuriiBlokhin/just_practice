@@ -28,25 +28,19 @@ def obj_id(payload):
 
 # pet_store_fixtures
 @pytest.fixture()
-def pet_id ():
-    payload = {
-        "id": 0,
-        "category": {
-            "id": 0,
-            "name": "lama"
-        },
-        "name": "rousvelt",
-        "photoUrls": [
-            "string"
-        ],
-        "tags": [
-            {
-                "id": 0,
-                "name": "string"
-            }
-        ],
-        "status": "available"
-    }
-    response = requests.post('https://petstore.swagger.io/v2/pet', json=payload).json()
+def pet_payload():
+    return json.loads(os.getenv("pet_payload"))
+
+@pytest.fixture()
+def pet_update_payload():
+    pet_id = os.getenv("pet_id")
+    return json.loads(os.getenv("pet_update_payload"))
+
+@pytest.fixture()
+def pet_id (pet_payload):
+    response = requests.post('https://petstore.swagger.io/v2/pet', json=pet_payload).json()
     return response['id']
 
+@pytest.fixture()
+def pet_base_url():
+    return os.getenv('pet_base_url')
