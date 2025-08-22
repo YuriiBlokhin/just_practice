@@ -18,7 +18,6 @@ def test_delete_order(order_id, base_store_url):
     delete_order_endpoint = DeleteOrder()
     delete_order_endpoint.delete_order(base_store_url, order_id)
     delete_order_endpoint.check_response_200()
-    delete_order_endpoint.check_response_200()
     verify_order_is_deleted = GetOrder()
     verify_order_is_deleted.get_order_by_id(base_store_url, order_id)
     verify_order_is_deleted.check_response_404(order_id)
