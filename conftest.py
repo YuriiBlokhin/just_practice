@@ -53,11 +53,30 @@ def pet_base_url():
 
 # store fixtures
 @pytest.fixture()
-def order_id(payload):
-    response = requests.post('https://petstore.swagger.io/v2/store/order', json=payload).json()
+def order_id(base_store_url, payload):
+    response = requests.post(base_store_url, json=payload).json()
     return response['id']
     # response = requests.delete(f'https://petstore.swagger.io/v2/store/order/{response["id"]}')
 
 @pytest.fixture()
 def base_store_url():
     return os.getenv('base_store_url')
+
+# user fixtures
+@pytest.fixture()
+def test_user(base_user_url, test_user_payload):
+    response = requests.post(base_user_url, json=test_user_payload).json()
+    yield test_user_payload['username']
+    response = requests.delete(f"{base_user_url}/{test_user_payload['username']}")
+
+@pytest.fixture()
+def base_user_url():
+    return os.getenv('base_user_url')
+
+@pytest.fixture()
+def test_user_payload():
+    return json.loads(os.getenv("user_payload"))
+
+@pytest.fixture()
+def test_user_update_payload():
+    return json.loads(os.getenv("user_update_payload"))
