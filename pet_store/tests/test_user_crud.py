@@ -1,3 +1,5 @@
+import time
+
 import requests
 from pet_store.objects.user_objects.create_user import CreateUser
 from pet_store.objects.user_objects.delete_user import DeleteUser
@@ -40,5 +42,6 @@ def test_delete_user(base_user_url, test_user):
     delete_user_endpoint.delete_user(base_user_url, test_user)
     delete_user_endpoint.check_response_200()
     verify_user_is_deleted = GetUserById()
+    time.sleep(2)
     verify_user_is_deleted.verify_user_is_deleted(base_user_url, test_user)
     verify_user_is_deleted.check_response_404()
