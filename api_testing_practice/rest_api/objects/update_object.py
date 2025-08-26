@@ -1,5 +1,5 @@
 import requests
-from rest_api.objects.base_object import BaseEndpoint
+from api_testing_practice.rest_api.objects.base_object import BaseEndpoint
 
 
 class UpdateObject(BaseEndpoint):

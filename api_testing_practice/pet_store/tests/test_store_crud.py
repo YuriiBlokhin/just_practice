@@ -1,7 +1,7 @@
 import time
-from pet_store.objects.store_objects.create_order import CreateOrder
-from pet_store.objects.store_objects.delete_order import DeleteOrder
-from pet_store.objects.store_objects.get_order import GetOrder
+from api_testing_practice.pet_store.objects.store_objects.create_order import CreateOrder
+from api_testing_practice.pet_store.objects.store_objects.delete_order import DeleteOrder
+from api_testing_practice.pet_store.objects.store_objects.get_order import GetOrder
 
 def test_create_order(payload, base_store_url):
     create_order_endpoint = CreateOrder()

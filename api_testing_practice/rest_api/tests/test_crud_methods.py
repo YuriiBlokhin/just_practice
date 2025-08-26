@@ -1,7 +1,7 @@
-from rest_api.objects.create_object import CreateObject
-from rest_api.objects.get_object import GetObject
-from rest_api.objects.update_object import UpdateObject
-from rest_api.objects.delete_object import DeleteObject
+from api_testing_practice.rest_api.objects.create_object import CreateObject
+from api_testing_practice.rest_api.objects.get_object import GetObject
+from api_testing_practice.rest_api.objects.update_object import UpdateObject
+from api_testing_practice.rest_api.objects.delete_object import DeleteObject
 
 
 def test_create_object(payload):

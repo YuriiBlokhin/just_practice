@@ -1,4 +1,4 @@
-from pet_store.objects.user_objects.base_user import BaseUser
+from api_testing_practice.pet_store.objects.user_objects.base_user import BaseUser
 import requests
 
 

@@ -1,5 +1,5 @@
 import requests
-from pet_store.objects.pet_objects.base_pet import BaseEndpoint
+from api_testing_practice.pet_store.objects.pet_objects.base_pet import BaseEndpoint
 
 
 class GetPet(BaseEndpoint):

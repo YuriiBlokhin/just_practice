@@ -1,8 +1,8 @@
 import time
-from pet_store.objects.pet_objects.create_pet import CreateNewPet
-from pet_store.objects.pet_objects.delete_pet import DeletePet
-from pet_store.objects.pet_objects.get_pet import GetPet
-from pet_store.objects.pet_objects.update_pet import UpdatePet
+from api_testing_practice.pet_store.objects.pet_objects.create_pet import CreateNewPet
+from api_testing_practice.pet_store.objects.pet_objects.delete_pet import DeletePet
+from api_testing_practice.pet_store.objects.pet_objects.get_pet import GetPet
+from api_testing_practice.pet_store.objects.pet_objects.update_pet import UpdatePet
 
 
 def test_create_pet(pet_base_url, pet_payload):

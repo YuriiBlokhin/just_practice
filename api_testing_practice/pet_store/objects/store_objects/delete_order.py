@@ -1,5 +1,5 @@
 import requests
-from pet_store.objects.store_objects.base_order import BaseOrder
+from api_testing_practice.pet_store.objects.store_objects.base_order import BaseOrder
 
 
 class DeleteOrder(BaseOrder):

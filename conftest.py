@@ -4,10 +4,10 @@ import os
 from dotenv import load_dotenv
 import requests
 
-from pet_store.objects.pet_objects.create_pet import CreateNewPet
-from pet_store.objects.pet_objects.delete_pet import DeletePet
-from rest_api.objects.create_object import CreateObject
-from rest_api.objects.delete_object import DeleteObject
+from api_testing_practice.pet_store.objects.pet_objects.create_pet import CreateNewPet
+from api_testing_practice.pet_store.objects.pet_objects.delete_pet import DeletePet
+from api_testing_practice.rest_api.objects.create_object import CreateObject
+from api_testing_practice.rest_api.objects.delete_object import DeleteObject
 
 load_dotenv()
 

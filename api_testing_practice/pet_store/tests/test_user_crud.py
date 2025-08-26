@@ -1,12 +1,11 @@
 import time
 
-import requests
-from pet_store.objects.user_objects.create_user import CreateUser
-from pet_store.objects.user_objects.delete_user import DeleteUser
-from pet_store.objects.user_objects.get_user import GetUserById
-from pet_store.objects.user_objects.login_user import LoginUser
-from pet_store.objects.user_objects.logout_user import LogoutUser
-from pet_store.objects.user_objects.update_user import UpdateUser
+from api_testing_practice.pet_store.objects.user_objects.create_user import CreateUser
+from api_testing_practice.pet_store.objects.user_objects.delete_user import DeleteUser
+from api_testing_practice.pet_store.objects.user_objects.get_user import GetUserById
+from api_testing_practice.pet_store.objects.user_objects.login_user import LoginUser
+from api_testing_practice.pet_store.objects.user_objects.logout_user import LogoutUser
+from api_testing_practice.pet_store.objects.user_objects.update_user import UpdateUser
 
 
 def test_create_user(base_user_url, test_user_payload):
