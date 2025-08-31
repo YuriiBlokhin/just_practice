@@ -1,7 +1,7 @@
 import os
 import requests
-from dotenv import load_dotenv
 from api_testing_practice.go_rest.objects.base_user_object import BaseUser
+from dotenv import load_dotenv
 
 load_dotenv()
 
